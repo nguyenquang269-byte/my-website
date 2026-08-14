@@ -3,113 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Quang - Trang cá nhân</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            max-width: 520px;
-            width: 100%;
-            padding: 40px 32px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-            text-align: center;
-            border: 1px solid #e2e8f0;
-        }
-
-        .avatar-placeholder {
-            width: 88px;
-            height: 88px;
-            background: #0284c7;
-            color: #ffffff;
-            font-size: 32px;
-            font-weight: bold;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px auto;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        p {
-            font-size: 16px;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 28px;
-        }
-
-        .actions {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: #0284c7;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0369a1;
-        }
-
-        .btn-secondary {
-            background-color: #f1f5f9;
-            color: #334155;
-        }
-
-        .btn-secondary:hover {
-            background-color: #e2e8f0;
+    <title>Dr.Q - Trang Chủ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-bg {
+                background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            }
         }
     </style>
 </head>
-<body>
-
-    <div class="card">
-        <div class="avatar-placeholder">Q</div>
-        <h1>Xin chào!</h1>
-        <p>Chào mừng bạn đã ghé thăm website chính thức của <strong>Dr. Quang</strong>.</p>
-        
-        <div class="actions">
-            <a href="mailto:contact@example.com" class="btn btn-primary">Liên hệ</a>
-            <a href="#" class="btn btn-secondary">Tìm hiểu thêm</a>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-10 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-[clamp(2.5rem,6vw,3.5rem)] font-bold mb-3">Dr.Q</h1>
+            <p class="text-lg md:text-xl opacity-90">Nơi tổng hợp các dự án & ứng dụng hữu ích</p>
         </div>
-    </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto py-10 px-4">
+        <!-- Giới thiệu -->
+        <section class="mb-12 bg-white rounded-2xl shadow-md p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <i class="fa fa-info-circle text-indigo-600 mr-3"></i>
+                Giới thiệu
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+                Chào mừng bạn đến với trang web của Dr.Q! Dưới đây là danh sách các dự án, ứng dụng và kho lưu trữ mà tôi đã phát triển. Mời bạn tham khảo và khám phá nhé!
+            </p>
+        </section>
+
+        <!-- Mục Tham khảo -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fa fa-link text-indigo-600 mr-3"></i>
+                Tham khảo & Dự án
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-5">
+                <!-- Kuromi Chatbot -->
+                <a href="https://kuromi-chatbot-ai.vercel.app/" target="_blank" class="bg-white rounded-xl shadow-md p-5 card-hover border-l-4 border-pink-500">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🎀 Kuromi Chatbot AI</h3>
+                    <p class="text-gray-500 text-sm mb-3">Trợ lý AI học tập & trò chuyện vui vẻ</p>
+                    <span class="text-indigo-600 text-sm inline-flex items-center">
+                        Mở trang <i class="fa fa-external-link ml-1 text-xs"></i>
+                    </span>
+                </a>
+
+                <!-- English Drilling Full -->
+                <a href="https://vercel.com/dr-q?repo=https%3A%2F%2Fgithub.com%2Fnguyenquang269-byte%2FEnglish-drilling-full" target="_blank" class="bg-white rounded-xl shadow-md p-5 card-hover border-l-4 border-blue-500">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📚 English Drilling Full</h3>
+                    <p class="text-gray-500 text-sm mb-3">Ứng dụng học tiếng Anh - kho lưu trữ & triển khai</p>
+                    <span class="text-indigo-600 text-sm inline-flex items-center">
+                        Xem dự án <i class="fa fa-external-link ml-1 text-xs"></i>
+                    </span>
+                </a>
+
+                <!-- Slingshot -->
+                <a href="https://vercel.com/dr-q?repo=https%3A%2F%2Fgithub.com%2Fnguyenquang269-byte%2Fslingshot" target="_blank" class="bg-white rounded-xl shadow-md p-5 card-hover border-l-4 border-amber-500">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🎮 Slingshot</h3>
+                    <p class="text-gray-500 text-sm mb-3">Dự án ứng dụng/trò chơi Slingshot</p>
+                    <span class="text-indigo-600 text-sm inline-flex items-center">
+                        Xem dự án <i class="fa fa-external-link ml-1 text-xs"></i>
+                    </span>
+                </a>
+
+                <!-- Aptrung2 -->
+                <a href="https://vercel.com/dr-q?repo=https%3A%2F%2Fgithub.com%2Fnguyenquang269-byte%2Faptrung2" target="_blank" class="bg-white rounded-xl shadow-md p-5 card-hover border-l-4 border-emerald-500">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🔧 Aptrung2</h3>
+                    <p class="text-gray-500 text-sm mb-3">Dự án tiện ích & công cụ Aptrung2</p>
+                    <span class="text-indigo-600 text-sm inline-flex items-center">
+                        Xem dự án <i class="fa fa-external-link ml-1 text-xs"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6 px-4 mt-8">
+        <div class="max-w-5xl mx-auto text-center">
+            <p>© 2026 Dr.Q — Tất cả quyền được bảo lưu</p>
+            <p class="text-sm mt-2 opacity-60">Dự án được lưu trữ trên GitHub & Triển khai trên Vercel</p>
+        </div>
+    </footer>
 </body>
 </html>
